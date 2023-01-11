@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document  Type="AceXML" version="1,0"  id="RadarExample">
+    <Descr>RadarExampleGauge</Descr>
+    <SimGauge.Gauge id="Gauge" ArtDirectory="C:\Prepar3D\SDK\Panels and User Interface\Panels\XML Gauge samples">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Size>255,305</Size>
+        <Element FloatPosition="0.000,0.000">
+            <Rectangle LineWidth="1" Width="255" Height="255" LineColor="green" FillColor="black"></Rectangle>
+        </Element>
+		<Element FloatPosition="1.000,1.000">
+			<Texture Name="P3DRadarExampleTexture" Width="253" Height="253" />
+		</Element>
+        <Element FloatPosition="10.000,260.000">
+            <GaugeText Size="40,40"      HorizontalAlign="LEFT"     FontHeight="12"      FontFace="courier new"
+                       Luminous="True"   VerticalAlign="TOP"        FontColor="green"    
+					   GaugeString="RANGE\n%((C:P3DRadarExample:RangeMiles, number))%!2d!NM"/>
+        </Element>
+        <Element FloatPosition="55.000,260.000">
+            <GaugeText Size="40,40"      HorizontalAlign="LEFT"     FontHeight="12"      FontFace="courier new"
+                       Luminous="True"   VerticalAlign="TOP"        FontColor="green"    
+					   GaugeString="SWEEP\n%((C:P3DRadarExample:ScanAzimuth, number))%!2d!°"/>
+        </Element>
+        <Element FloatPosition="100.000,260.000">
+            <GaugeText Size="40,40"      HorizontalAlign="LEFT"     FontHeight="12"      FontFace="courier new"
+                       Luminous="True"   VerticalAlign="TOP"        FontColor="green"    
+					   GaugeString="ZOOM\n%((C:P3DRadarExample:VisualZoom, number))%!1.2f!"/>
+        </Element>
+        <Element FloatPosition="145.000,260.000">
+			<Element>
+				<Rectangle id="Rectangle" LineWidth="1" Width="40" Height="40" LineColor="green" FillColor="black"></Rectangle>
+			</Element>
+			<Element>
+				<Visibility>(C:P3DRadarExample:FreezeEnabled,Number)</Visibility>
+				<Rectangle id="Rectangle" LineWidth="3" Width="40" Height="40" LineColor="green" FillColor="black"></Rectangle>
+			</Element>
+			<Element FloatPosition="0.000,5.000">
+				<GaugeText Size="40,40"      HorizontalAlign="CENTER"     FontHeight="12"      FontFace="courier new"
+						   Luminous="True"   VerticalAlign="CENTER"        FontColor="green"    GaugeString="FREEZE\nIMAGE"/>
+			</Element>
+        </Element>
+        <Element FloatPosition="200.000,260.000">
+			<Element>
+				<Rectangle id="Rectangle" LineWidth="1" Width="40" Height="40" LineColor="green" FillColor="black"></Rectangle>
+			</Element>
+			<Element>
+				<Visibility>(L:P3DRadarExampleTrackEnabled,Number)</Visibility>
+				<Rectangle id="Rectangle" LineWidth="3" Width="40" Height="40" LineColor="green" FillColor="black"></Rectangle>
+			</Element>
+			<Element FloatPosition="0.000,5.000">
+				<GaugeText Size="40,40"      HorizontalAlign="CENTER"     FontHeight="12"      FontFace="courier new"
+						   Luminous="True"   VerticalAlign="CENTER"        FontColor="green"    GaugeString="TRACK\nCURSOR"/>
+			</Element>
+        </Element>
+        <Element FloatPosition="10.000,290.000">
+			<Element>
+				<Rectangle id="Rectangle" LineWidth="1" Width="10" Height="10" LineColor="green" FillColor="black"></Rectangle>
+			</Element>
+			<Element>
+				<GaugeText Size="10,10"      HorizontalAlign="CENTER"      FontHeight="10"      FontFace="courier new"
+						   Luminous="True"   VerticalAlign="CENTER"        FontColor="green"    GaugeString="-"/> 
+			</Element>
+        </Element>
+        <Element FloatPosition="25.000,290.000">
+			<Element>
+				<Rectangle id="Rectangle" LineWidth="1" Width="10" Height="10" LineColor="green" FillColor="black"></Rectangle>
+			</Element>
+			<Element>
+				<GaugeText Size="10,10"      HorizontalAlign="CENTER"      FontHeight="10"      FontFace="courier new"
+						   Luminous="True"   VerticalAlign="CENTER"        FontColor="green"    GaugeString="+"/> 
+			</Element>
+        </Element>
+        <Element FloatPosition="55.000,290.000">
+			<Element>
+				<Rectangle id="Rectangle" LineWidth="1" Width="10" Height="10" LineColor="green" FillColor="black"></Rectangle>
+			</Element>
+			<Element>
+				<GaugeText Size="10,10"      HorizontalAlign="CENTER"      FontHeight="10"      FontFace="courier new"
+						   Luminous="True"   VerticalAlign="CENTER"        FontColor="green"    GaugeString="-"/> 
+			</Element>
+        </Element>
+        <Element FloatPosition="70.000,290.000">
+			<Element>
+				<Rectangle id="Rectangle" LineWidth="1" Width="10" Height="10" LineColor="green" FillColor="black"></Rectangle>
+			</Element>
+			<Element>
+				<GaugeText Size="10,10"      HorizontalAlign="CENTER"      FontHeight="10"      FontFace="courier new"
+						   Luminous="True"   VerticalAlign="CENTER"        FontColor="green"    GaugeString="+"/> 
+			</Element>
+        </Element>
+        <Element FloatPosition="100.000,290.000">
+			<Element>
+				<Rectangle id="Rectangle" LineWidth="1" Width="10" Height="10" LineColor="green" FillColor="black"></Rectangle>
+			</Element>
+			<Element>
+				<GaugeText Size="10,10"      HorizontalAlign="CENTER"      FontHeight="10"      FontFace="courier new"
+						   Luminous="True"   VerticalAlign="CENTER"        FontColor="green"    GaugeString="-"/> 
+			</Element>
+        </Element>
+        <Element FloatPosition="115.000,290.000">
+			<Element>
+				<Rectangle id="Rectangle" LineWidth="1" Width="10" Height="10" LineColor="green" FillColor="black"></Rectangle>
+			</Element>
+			<Element>
+				<GaugeText Size="10,10"      HorizontalAlign="CENTER"      FontHeight="10"      FontFace="courier new"
+						   Luminous="True"   VerticalAlign="CENTER"        FontColor="green"    GaugeString="+"/> 
+			</Element>
+        </Element>
+        <MouseArea id="MouseArea all">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Size>400,500</Size>
+            <CursorType>Normal</CursorType>
+            <MouseArea>
+                <FloatPosition>1.0,1.0</FloatPosition>
+                <Size>253,253</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+					<Script>!lua 
+					        event = varget("M:Event","String")
+							cursorSet = 0
+							-- Handle Cursor set or scroll
+							if event == "LeftSingle" or event == "LeftDrag" or event == "LeftRelease" then
+								x = varget("M:X","Number") / 255.0
+								y = varget("M:Y","Number") / 255.0
+								-- Zoomed in center cursor on view and pan around on drag
+								z = varget("C:P3DRadarExample:VisualZoom","Number")
+								if z &gt; 1 then
+									if event == "LeftDrag" then
+									   lx = varget("L:P3DRadarExampleLastCursorPositionX","Number")
+									   ly = varget("L:P3DRadarExampleLastCursorPositionY","Number")
+									   cx = varget("C:P3DRadarExample:CursorPositionX","Number")
+									   cy = varget("C:P3DRadarExample:CursorPositionY","Number")
+									   finalx = cx - ( x - lx ) / z 
+									   finaly = cy - ( y - ly ) / z 
+									   varset("C:P3DRadarExample:CursorPositionX",finalx)
+									   varset("C:P3DRadarExample:CursorPositionY",finaly)
+									   cursorSet = 1
+									elseif event == "LeftRelease" then
+									    -- set freesze mode back to previous value
+										varset("C:P3DRadarExample:FreezeEnabled",varget("L:P3DRadarExampleFreezeEnabled","Number"));
+									else
+										-- freeze image while panning because data texture
+										-- Will get remapped if data zoom is used
+										varset("C:P3DRadarExample:FreezeEnabled",1);
+									end
+									-- store last cursor position to compare against for dragging
+									varset("L:P3DRadarExampleLastCursorPositionX",x)
+									varset("L:P3DRadarExampleLastCursorPositionY",y)
+								else
+									-- not zoomed so just set cursor position directly
+									varset("C:P3DRadarExample:CursorPositionX",x)
+									varset("C:P3DRadarExample:CursorPositionY",y)
+									cursorSet = 1
+								end
+								-- if either case above was hit where cursor got set and tracking is enabled
+								-- then request the lat and lon of the cursor because the radar system doesn't
+								-- keep the lat lon around.  This will get set in the update script
+								if cursorSet == 1 and varget("L:P3DRadarExampleTrackEnabled","Number") == 1 then
+									varset("L:P3DRadarExampleTrackLat","Number", varget("C:P3DRadarExample:CursorPositionLat","Number"))
+									varset("L:P3DRadarExampleTrackLon","Number", varget("C:P3DRadarExample:CursorPositionLon","Number"))
+								end
+
+							elseif event == "WheelUp" then
+								-- zoom in 0.25 when mouse wheel scrolls up
+								z = varget("C:P3DRadarExample:VisualZoom","Number")
+								if z &lt; 10 then
+									z = z + 0.25
+									if z &gt; 3 then
+										varset("C:P3DRadarExample:DataZoom",z)
+									else
+										varset("C:P3DRadarExample:DataZoom",1)
+									end
+									varset("C:P3DRadarExample:VisualZoom",z)
+								end							
+							elseif event == "WheelDown" then
+								-- zoom out 0.25 when mouse wheel scrolls down
+								z = varget("C:P3DRadarExample:VisualZoom","Number")
+								if z &gt; 1 then
+									z = z - 0.25
+									if z &gt; 3 then
+										varset("C:P3DRadarExample:DataZoom",z)
+									else
+										varset("C:P3DRadarExample:DataZoom",1)
+									end
+									varset("C:P3DRadarExample:VisualZoom",z)
+								end						
+							end
+
+					</Script>
+                    <ClickType>WheelUp+WheelDown+LeftSingle+LeftDrag+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea FloatPosition="10.000,290.000" Size="10,10" CursorType="Hand">
+                <MouseClick id="MouseClick">
+					<Script>!lua
+							-- reduce range by half and clamp to min value of 10
+							range = varget("C:P3DRadarExample:RangeMiles","Number")
+							if range &gt; 10 then
+								range = range * 0.5
+								varset("C:P3DRadarExample:RangeMiles",range)
+							end
+					</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea FloatPosition="25.000,290.000" Size="10,10" CursorType="Hand">
+                <MouseClick id="MouseClick">
+					<Script>!lua 
+					        -- double range and clamp to max value of 80
+							range = varget("C:P3DRadarExample:RangeMiles","Number")
+							if range &lt; 80 then
+								range = range * 2
+								varset("C:P3DRadarExample:RangeMiles",range)
+							end	
+					</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea FloatPosition="55.000,290.000" Size="10,10" CursorType="Hand">
+                <MouseClick id="MouseClick">
+					<Script>!lua 
+							-- reduce sweep angle by 10 and cap to min of 10 degrees
+							az = varget("C:P3DRadarExample:ScanAzimuth","Number")
+							if az &gt; 10 then
+							    az = az - 10
+								varset("C:P3DRadarExample:ScanAzimuth",az)
+							end			
+					</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea FloatPosition="70.000,290.000" Size="10,10" CursorType="Hand">
+                <MouseClick>
+					<Script>!lua
+								-- increase sweep angle by 10 and cap at max of 60
+								az = varget("C:P3DRadarExample:ScanAzimuth","Number")
+								if az &lt; 60 then
+									az = az + 10	
+									varset("C:P3DRadarExample:ScanAzimuth",az)
+								end 
+					</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea FloatPosition="100.000,290.000" Size="10,10" CursorType="Hand">
+                <MouseClick>
+					<Script>!lua
+								-- zoom out 1x cap at min zoom level of 1
+								z = varget("C:P3DRadarExample:VisualZoom","Number")
+								if z &gt; 1.75 then
+									z = z - 1
+									-- Remap data using data zoom if zoom is higher than 3x
+									if z &gt; 3 then
+										varset("C:P3DRadarExample:DataZoom",z)
+									else
+										varset("C:P3DRadarExample:DataZoom",1)
+									end
+									varset("C:P3DRadarExample:VisualZoom",z)
+								end
+					</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea FloatPosition="115.000,290.000" Size="10,10" CursorType="Hand">
+                <MouseClick id="MouseClick">
+					<Script>!lua				
+							-- zoom in 1x cap at max zoom level of 10
+							z = varget("C:P3DRadarExample:VisualZoom","Number")
+							if z &lt; 10 then
+								z = z + 1
+								-- Remap data using data zoom if zoom is higher than 3x
+								if z &gt; 3 then
+									varset("C:P3DRadarExample:DataZoom",z)
+								else
+									varset("C:P3DRadarExample:DataZoom",1)
+								end
+								varset("C:P3DRadarExample:VisualZoom",z)
+							end
+					</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea FloatPosition="145.000,260.000" Size="40,40" CursorType="Hand">
+                <MouseClick id="MouseClick">
+					<Script>!lua
+							-- Toggle Freeze				
+							f = varget("C:P3DRadarExample:FreezeEnabled","Number")
+							if f == 0 then
+							  f = 1
+							else
+							  f = 0
+							end
+							varset("C:P3DRadarExample:FreezeEnabled",f)
+							varset("L:P3DRadarExampleFreezeEnabled",f)
+					</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea  FloatPosition="200.000,260.000" Size="40,40" CursorType="Hand">
+                <MouseClick id="MouseClick">
+					<Script>!lua	
+							if varget("L:P3DRadarExampleTrackEnabled","Number") == 0 then
+								-- turning track on so get current cursor lla
+								varset("L:P3DRadarExampleTrackLat","Number", varget("C:P3DRadarExample:CursorPositionLat","Number"))
+								varset("L:P3DRadarExampleTrackLon","Number", varget("C:P3DRadarExample:CursorPositionLon","Number"))
+								varset("L:P3DRadarExampleTrackEnabled",1)
+							else
+							  varset("L:P3DRadarExampleTrackEnabled",0)
+							end
+					</Script>
+                    <ClickType>LeftSingle</ClickType>
+                </MouseClick>
+            </MouseArea>			
+        </MouseArea>
+		<Update Frequency="1">
+		<Script>!lua 
+				-- first time update is called set some reasonable defaults because these states won't reset on
+				-- closing the window
+				if varget("L:P3DRadarExampleInitialized","Number") ~= 1 then
+					varset("L:P3DRadarExampleInitialized",1)
+					varset("L:P3DRadarExampleFreezeEnabled",0)
+					varset("C:P3DRadarExample:RenderingEnabled",1)
+					varset("C:P3DRadarExample:ScanAzimuth",60)
+					varset("C:P3DRadarExample:ShowCursor",1)
+					varset("C:P3DRadarExample:VisualZoom",1)
+					varset("C:P3DRadarExample:DataZoom",1)
+					varset("L:P3DRadarExampleTrackEnabled",0)
+				end
+				-- If cursor tracking is enabled then set the tack points lat lon to the radar cursor position must 
+				-- do this in the update script because the radar system only stores the screen position not the lat 
+				-- lon.  This setter cause a conversion routine is is provided to make gauge development easier
+				if varget("L:P3DRadarExampleTrackEnabled","Number") == 1 then
+					varset("C:P3DRadarExample:CursorPositionLat","Number", varget("L:P3DRadarExampleTrackLat","Number"))
+					varset("C:P3DRadarExample:CursorPositionLon","Number", varget("L:P3DRadarExampleTrackLon","Number"))
+				end
+		</Script> 
+		 
+		</Update>		
+
+    </SimGauge.Gauge>
+</SimBase.Document>
